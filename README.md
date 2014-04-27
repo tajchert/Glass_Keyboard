@@ -1,17 +1,13 @@
-Google Glass NumPad
+Google Glass Keyboard
 ============
-App for Google Glass that allows you to input digits, simple as that. Select digit by moving your head horizontally, and tap to make a choice.
+App for Google Glass that allows you to input digits and letters, simple as that. Select them byhead movement, and tap to make a choice.
 
-###Use of an app
-In ```Tools``` class you will find ```inputLength``` that defines how many digits should user select before terminating Activity. Also in ```Tools``` there is ```saved``` parameter which is String of digits so far selected.
+###Details
+App isn't yet in stable release, I will finish it in few hours (I need some sleep).
 
+![select symbol](https://raw.githubusercontent.com/tajchert/Glass_Keyboard/master/screenshots/one.jpg)
 
-Selecting digit, one that is upsized is going to be selected when user taps Glasses. On the top there is ```TextView``` that shows digits selected so far (```X``` is for empty selection).
-
-![select number](https://raw.githubusercontent.com/tajchert/Glass_NumPad/master/screenshots/one.jpg)
-
-
-![select number](https://raw.githubusercontent.com/tajchert/Glass_NumPad/master/screenshots/two.jpg)
+![select symbol](https://raw.githubusercontent.com/tajchert/Glass_Keyboard/master/screenshots/two.jpg)
 
 
 ###Final note
