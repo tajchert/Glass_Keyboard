@@ -1,7 +1,5 @@
 package pl.tajchert.glassware.keyboard;
 
-import com.google.android.glass.media.Sounds;
-
 import android.app.Activity;
 import android.content.Context;
 import android.hardware.Sensor;
@@ -13,6 +11,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.view.WindowManager.LayoutParams;
@@ -124,13 +123,14 @@ public class KeyboardActivity extends Activity implements
 		}
 		angleValH = (azimuth_angle - firstAngleValH);
 		angleValV = (pitch_angle - firstAngleValV);
-		//Log.d(Tools.AWESOME_TAG, "tmpAngle: " + angleVal);
+		//Log.d(Tools.AWESOME_TAG, "angleValH: " + angleValH);
 		//Log.d(Tools.AWESOME_TAG, "angleValV: " + angleValV+" - "+ angleValV +"/" + firstAngleValV);
 		if(Math.abs(angleValV)> Tools.maxVerticalAngle){
 			firstAngleValV = (pitch_angle - Tools.sliceSizeV);
 			angleValV = (pitch_angle - firstAngleValV);
 		}
 		if(Math.abs(angleValH)>Tools.maxHorizontalAngle){
+			Log.d(Tools.AWESOME_TAG, "angleValH: " + angleValH);
 			firstAngleValH = (azimuth_angle - Tools.sliceSizeH);
 			angleValH = (azimuth_angle - firstAngleValH);
 		}
@@ -155,8 +155,37 @@ public class KeyboardActivity extends Activity implements
 
 		@Override
 		protected void onPostExecute(String result) {
-			Log.d(Tools.AWESOME_TAG, "rowNumber: " + rowNumber);
-			Log.d(Tools.AWESOME_TAG, rowContent[0] + "," + rowContent[1] +"," + rowContent[2]);
+			//Log.d(Tools.AWESOME_TAG, "rowNumber: " + rowNumber);
+			//Log.d(Tools.AWESOME_TAG, rowContent[0] + "," + rowContent[1] +"," + rowContent[2]);
+			resetTextFields();
+			switch(rowNumber){
+			case 0:
+				mOneLeft.setText(rowContent[0]);
+				mOneMiddle.setText(rowContent[1]);
+				mOneMiddle.setVisibility(View.VISIBLE);
+				mOneRight.setText(rowContent[2]);
+				break;
+			case 1:
+				mTwoLeft.setText(rowContent[0]);
+				mTwoMiddle.setText(rowContent[1]);
+				mTwoMiddle.setVisibility(View.VISIBLE);
+				mTwoRight.setText(rowContent[2]);
+				break;
+			case 2:
+				mThreeLeft.setText(rowContent[0]);
+				mThreeMiddle.setText(rowContent[1]);
+				mThreeMiddle.setVisibility(View.VISIBLE);
+				mThreeRight.setText(rowContent[2]);
+				break;
+			case 3:
+				mFourLeft.setText(rowContent[0]);
+				mFourMiddle.setText(rowContent[1]);
+				mFourMiddle.setVisibility(View.VISIBLE);
+				mFourRight.setText(rowContent[2]);
+				break;
+				
+			}
+			//TODO update layout
 			//mLeft.setText(rowContent[0] + "");
 			//mMiddle.setText(rowContent[1] + "");
 			//mRight.setText(rowContent[2] + "");
@@ -175,18 +204,22 @@ public class KeyboardActivity extends Activity implements
 	private void resetTextFields(){
 		mOneLeft.setText(Tools.rows[0]);
 		mOneMiddle.setText("");
+		mOneMiddle.setVisibility(View.GONE);
 		mOneRight.setText("");
 		
 		mTwoLeft.setText(Tools.rows[1]);
 		mTwoMiddle.setText("");
+		mTwoMiddle.setVisibility(View.GONE);
 		mTwoRight.setText("");
 		
 		mThreeLeft.setText(Tools.rows[2]);
 		mThreeMiddle.setText("");
+		mThreeMiddle.setVisibility(View.GONE);
 		mThreeRight.setText("");
 		
 		mFourLeft.setText(Tools.rows[3]);
 		mFourMiddle.setText("");
+		mFourMiddle.setVisibility(View.GONE);
 		mFourRight.setText("");
 	}
 	
