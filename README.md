@@ -4,6 +4,7 @@ App for Google Glass that allows you to input digits and letters, simple as that
 
 ###Details
 App isn't yet in stable release, I will finish it in few hours (I need some sleep).
+However it should work (with some minor bugs).
 
 ![select symbol](https://raw.githubusercontent.com/tajchert/Glass_Keyboard/master/screenshots/one.jpg)
 
