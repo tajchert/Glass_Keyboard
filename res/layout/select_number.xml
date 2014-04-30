@@ -28,6 +28,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="center"
         android:layout_below="@+id/top"
+        android:layout_marginTop="-10dp"
         android:gravity="top"
         android:orientation="vertical" >
 
@@ -35,7 +36,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginBottom="-20dp"
+            android:layout_marginBottom="-30dp"
             android:gravity="center" >
 
             <TextView
