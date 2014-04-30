@@ -30,6 +30,8 @@ public class Tools {
 		int position = degrees/sliceSizeH;
 		if(position<0){
 			position = 0;
+		}else if(position >= rows[rowNumber].length()){
+			position = (rows[rowNumber].length()-1);
 		}
 		//TODO
 		result[0] = rows[rowNumber].substring(0, position);

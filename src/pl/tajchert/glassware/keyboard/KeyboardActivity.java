@@ -36,7 +36,7 @@ public class KeyboardActivity extends Activity implements
 	private TextView mFourMiddle;
 	private TextView mFourRight;
 	
-	//private TextView mTop;
+	private TextView mTop;
 	
 	private SensorManager mSensorManager;
 	private Sensor mOrientation;
