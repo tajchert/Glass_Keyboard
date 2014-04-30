@@ -7,7 +7,8 @@ In ```Tools``` class you will find ```inputLength``` that defines how many symbo
 As well you can there change rows content, order or add new symbols - modify ```rows``` array of Strings.
 
 
-Selecting digit, one that is upsized is going to be selected when user taps Glasses. On the top there is ```TextView``` that shows digits selected so far (```X``` is for empty selection).
+###Selecting
+Symbol that is upsized is going to be selected when user taps Glasses. On the top there is ```TextView``` that shows digits selected so far (```X``` is for empty selection). It is missing in screenshots below (was aded later on).
 
 ![select symbol](https://raw.githubusercontent.com/tajchert/Glass_Keyboard/master/screenshots/one.jpg)
 
