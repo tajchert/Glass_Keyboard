@@ -14,19 +14,21 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int fourleft=0x7f07000a;
-        public static final int fourmiddle=0x7f07000b;
-        public static final int fourright=0x7f07000c;
-        public static final int keyboard=0x7f070000;
-        public static final int oneleft=0x7f070001;
-        public static final int onemiddle=0x7f070002;
-        public static final int oneright=0x7f070003;
-        public static final int threeleft=0x7f070007;
-        public static final int threemiddle=0x7f070008;
-        public static final int threeright=0x7f070009;
-        public static final int twoleft=0x7f070004;
-        public static final int twomiddle=0x7f070005;
-        public static final int tworight=0x7f070006;
+        public static final int fourleft=0x7f07000c;
+        public static final int fourmiddle=0x7f07000d;
+        public static final int fourright=0x7f07000e;
+        public static final int inputed=0x7f070001;
+        public static final int keyboard=0x7f070002;
+        public static final int oneleft=0x7f070003;
+        public static final int onemiddle=0x7f070004;
+        public static final int oneright=0x7f070005;
+        public static final int threeleft=0x7f070009;
+        public static final int threemiddle=0x7f07000a;
+        public static final int threeright=0x7f07000b;
+        public static final int top=0x7f070000;
+        public static final int twoleft=0x7f070006;
+        public static final int twomiddle=0x7f070007;
+        public static final int tworight=0x7f070008;
     }
     public static final class layout {
         public static final int select_number=0x7f030000;

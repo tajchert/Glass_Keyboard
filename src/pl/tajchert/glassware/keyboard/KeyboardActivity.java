@@ -1,5 +1,7 @@
 package pl.tajchert.glassware.keyboard;
 
+import com.google.android.glass.media.Sounds;
+
 import android.app.Activity;
 import android.content.Context;
 import android.hardware.Sensor;
@@ -47,7 +49,7 @@ public class KeyboardActivity extends Activity implements
 	private int angleValH = 0; // Horizontal
 	private int firstAngleValV; // Vertical
 	private int angleValV = 0; // Vertical
-	//private String currentMiddle;
+	private String currentMiddle;
 
 	Float azimuth_angle;
 	Float pitch_angle;
@@ -56,18 +58,17 @@ public class KeyboardActivity extends Activity implements
 	@Override
 	public boolean onKeyDown(int keycode, KeyEvent event) {
 		if (keycode == KeyEvent.KEYCODE_DPAD_CENTER) {
-			end();
-			/*Log.i(Tools.AWESOME_TAG, "KEYCODE_DPAD_CENTER");
+			Log.i(Tools.AWESOME_TAG, "KEYCODE_DPAD_CENTER");
 			if(Tools.saved.length() < Tools.inputLength){
 				Tools.saved += currentMiddle;
-				//mTop.setText(Tools.saved);
+				mTop.setText(Tools.saved);
 			}
 			if(Tools.saved.length() == Tools.inputLength){
 				audio.playSoundEffect(Sounds.SUCCESS);
 				end();
 			}else{
 				audio.playSoundEffect(Sounds.TAP);
-			}*/
+			}
 			return true;
 		}
 		return false;
@@ -158,6 +159,7 @@ public class KeyboardActivity extends Activity implements
 			//Log.d(Tools.AWESOME_TAG, "rowNumber: " + rowNumber);
 			//Log.d(Tools.AWESOME_TAG, rowContent[0] + "," + rowContent[1] +"," + rowContent[2]);
 			resetTextFields();
+			currentMiddle = rowContent[1];
 			switch(rowNumber){
 			case 0:
 				mOneLeft.setText(rowContent[0]);
@@ -224,6 +226,7 @@ public class KeyboardActivity extends Activity implements
 	}
 	
 	private void setTextFields(){
+		mTop = (TextView) findViewById(R.id.inputed);
 		mOneLeft = (TextView) findViewById(R.id.oneleft);
 		mOneMiddle = (TextView) findViewById(R.id.onemiddle);
 		mOneRight = (TextView) findViewById(R.id.oneright);

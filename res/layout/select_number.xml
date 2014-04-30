@@ -6,13 +6,29 @@
     android:background="#000"
     android:orientation="vertical"
     tools:context=".MainActivity" >
+      <LinearLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|top" >
+
+        <TextView
+            android:id="@+id/inputed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="X"
+            android:textColor="#FFF"
+            android:textSize="25sp" />
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/keyboard"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center"
-        android:gravity="center"
+        android:layout_below="@+id/top"
+        android:gravity="top"
         android:orientation="vertical" >
 
         <RelativeLayout
